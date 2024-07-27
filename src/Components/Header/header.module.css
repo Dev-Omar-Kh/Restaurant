@@ -1,0 +1,323 @@
+header{
+
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 4.5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--second-color);
+    border-bottom: 1px solid var(--third-color-007);
+    overflow: hidden;
+
+}
+
+/* ====== logo ====== */
+
+.logo{
+
+    width: 197px;
+
+}
+
+.logo img{
+
+    width: 100%;
+
+}
+
+/* ====== location ====== */
+
+.location{
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 18px;
+
+}
+
+.location_title{
+
+    font-weight: 700;
+    line-height: 18px;
+    color: var(--fifth-color);
+
+}
+
+.location_det{
+
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    line-height: 25.2px;
+
+}
+
+.location_det i{
+
+    color: var(--third-color);
+
+}
+
+.static{
+
+    font-weight: 400;
+    color: var(--fifth-color);
+
+}
+
+.dynamic{
+
+    font-weight: 700;
+    color: var(--fifth-color);
+
+}
+
+/* ====== nav ====== */
+
+nav{
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.navLinks{
+
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 18px;
+    color: var(--third-color);
+    border-radius: 4px;
+    color: var(--fifth-color);
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+.navLinks span{
+
+    display: none;
+    font-size: 16px;
+    font-weight: 500;
+
+}
+
+.navLinks:hover{
+
+    background-color: var(--third-color-007);
+
+}
+
+/* nav i{
+
+    padding: 10px;
+    font-size: 18px;
+    color: var(--third-color);
+    border-radius: 4px;
+    color: var(--fifth-color);
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+nav i:hover{
+
+    background-color: var(--third-color-007);
+
+} */
+
+/* === nav-phone === */
+
+.nav_ph {
+
+    position: relative;
+    display: none;
+    order: 3;
+    width: 30px;
+    height: 20px;
+    transition: 0.3s;
+
+}
+
+.nav_ph .nav_span {
+
+    position: absolute;
+    width: 100%;
+    height: calc(100% / 6);
+    border-radius: 25px;
+    background-color: var(--fifth-color);
+    transition: 0.3s;
+
+}
+
+.nav_ph .nav_span:nth-child(1) {
+
+    top: 1px;
+    left: 0;
+
+}
+
+.nav_ph .nav_span:nth-child(2) {
+
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    transition: 0s !important;
+
+}
+
+.nav_ph .nav_span:nth-child(3) {
+
+    bottom: 1px;
+    left: 0;
+
+}
+
+.change {
+
+    rotate: 180deg;
+
+}
+
+.change .nav_span:nth-child(1) {
+
+    top: 50%;
+    left: 1px;
+    rotate: -45deg;
+
+}
+
+.change .nav_span:nth-child(2) {
+
+    opacity: 0;
+    left: -100%;
+
+}
+
+.change .nav_span:nth-child(3) {
+
+    top: 50%;
+    left: 0;
+    rotate: 45deg;
+
+}
+
+/* ====== responsive-style ====== */
+
+@media(max-width: 1060px){
+
+    header{
+
+        flex-wrap: wrap !important;
+        gap: 10px;
+
+    }
+
+    .location{
+
+        width: 100% !important;
+        justify-content: center;
+        order: 1 !important;
+
+    }
+
+    .logo{
+
+        order: 2 !important;
+
+    }
+
+    nav{
+
+        order: 3 !important;
+
+    }
+
+}
+
+@media(max-width: 572px){
+
+    .location{
+
+        gap: 4px !important;
+        font-size: 14px !important;
+
+    }
+
+    .location_det{
+
+        gap: 3px !important;
+
+    }
+
+    nav{
+
+        position: fixed;
+        top: 81px;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 91px);
+        padding: 20px 4.5%;
+        flex-direction: column !important;
+        background-color: var(--light-color);
+        overflow: hidden;
+        visibility: hidden;
+        opacity: 0;
+        z-index: 0;
+        transition: 0.3s;
+
+    }
+
+    .navLinks{
+
+        padding: 10px 0px;
+        width: 100%;
+        text-align: center;
+
+    }
+
+    .navLinks span{
+
+        display: inline-block;
+
+    }
+
+    .display_nav {
+
+        top: 91px;
+        visibility: visible;
+        opacity: 1;
+
+    }
+
+    .nav_ph{
+
+        display: inline-block;
+
+    }
+
+}
+
+@media(max-width: 427px){
+
+    .logo{
+
+        width: 170px !important;
+
+    }
+
+    .location{
+
+        font-size: 10px !important;
+
+    }
+
+}

@@ -1,13 +1,31 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+*{
+
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Source Sans 3", sans-serif;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root{
+
+  --first-color: #212121;
+  --second-color: #F5F5F5;
+  --third-color: #FFB30E;
+  --forth-color: #F17228;
+  --fifth-color: #424242;
+
+  --first-color-0991: rgba(33, 33, 33, 0.991);
+  --third-color-007: rgba(255, 179, 14, 0.07);
+
+}
+
+body{
+
+  width: 100%;
+  background-color: var(--second-color);
+
 }
