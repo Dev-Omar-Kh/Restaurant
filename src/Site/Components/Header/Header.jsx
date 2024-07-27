@@ -7,7 +7,7 @@ import Search from './Search-Bar/Search';
 export default function Header() {
 
     const [count, setCount] = useState(0)
-    const [searchDisplay, setSearchDisplay] = useState(false)
+    const [searchDisplay, setSearchDisplay] = useState(false);
 
     useEffect(() => {
 

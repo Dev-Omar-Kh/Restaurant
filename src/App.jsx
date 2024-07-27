@@ -1,10 +1,17 @@
 import React from 'react'
-import Header from './Components/Header/Header'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Layout from './Site/Components/Layout/Layout';
+import Home from './Site/Components/Home/Home';
 
 const routes = createBrowserRouter([
 
-  {path : '/' , element : <Header />}
+  {path : '/' , element : <Layout /> , children : [
+
+    {path : '/' , element : <Home />},
+
+    {path : '*' , element : <h1>Error 404</h1>}
+
+  ]}
 
 ])
 

@@ -10,6 +10,7 @@ header{
     justify-content: space-between;
     background-color: var(--second-color);
     border-bottom: 1px solid var(--third-color-007);
+    z-index: 100;
     overflow: hidden;
 
 }
@@ -267,11 +268,11 @@ nav i:hover{
         height: calc(100% - 91px);
         padding: 20px 4.5%;
         flex-direction: column !important;
-        background-color: var(--light-color);
+        background-color: var(--second-color) !important;
         overflow: hidden;
         visibility: hidden;
         opacity: 0;
-        z-index: 0;
+        z-index: 100;
         transition: 0.3s;
 
     }

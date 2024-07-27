@@ -1,0 +1,327 @@
+.container{
+
+    position: relative;
+    width: 100%;
+    height: 80svh;
+    padding: 0px 4.5%;
+    display: flex;
+    align-items: center;
+    background-color: var(--third-color);
+    z-index: 0;
+    overflow: hidden;
+
+}
+
+.bg_image{
+
+    position: absolute;
+    bottom: 0;
+    right: 4.5%;
+    width: 497.14px;
+    filter: drop-shadow(-80px 20px 30px rgba(0, 0, 0, 0.4));
+    opacity: 0.95;
+    z-index: 0;
+
+}
+
+/* ====== main-content ====== */
+
+.main_content{
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 1;
+
+}
+
+.title{
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.title h2{
+
+    font-size: 88px;
+    font-weight: 700;
+    color: var(--eighth-color);
+    line-height: 88px;
+
+}
+
+.title p{
+
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 26.4px;
+    color: var(--sixth-color);
+
+}
+
+/* === food-box === */
+
+.food_box{
+
+    padding: 24px;
+    border-radius: 16px;
+    background-color: var(--eighth-color);
+
+}
+
+.top{
+
+    padding-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid var(--forth-color-01);
+    /* background-color: aqua; */
+
+}
+
+.top button{
+
+    padding: 10px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+    color: var(--seventh-color);
+    border: none;
+    background-color: transparent;
+    border-radius: 8px;
+    transition: 0.3s;
+    cursor: pointer;
+
+}
+
+.top button i , .top button p{
+
+    transition: 0.3s;
+
+}
+
+.top button:hover{
+
+    background-color: var(--forth-color-01);
+
+}
+
+.top button:hover #icon , .top button:hover .btn_content{
+
+    color: var(--forth-color);
+
+}
+
+.bottom{
+
+    padding-top: 24px;
+
+}
+
+.bottom form{
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+}
+
+.input{
+
+    position: relative;
+    width: 500px;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: var(--second-color);
+
+}
+
+.input input{
+
+    width: 100%;
+    padding: 8px 16px;
+    padding-left: 43px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25.2px;
+    color: var(--fifth-color);
+    outline: none;
+    border: none;
+    background-color: transparent;
+
+}
+
+.input label{
+
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: var(--ninth-color);
+
+}
+
+.bottom button{
+
+    padding: 16px 32px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+    color: var(--eighth-color);
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(95.71deg, #FF7A7A -39.64%, #F75900 135.31%);
+    transition: 0.3s;
+    cursor: pointer;
+
+}
+
+/* ====== responsive-style ====== */
+
+@media(max-width: 1024px){
+
+    .title p{
+
+        color: var(--second-color);
+        font-weight: 500;
+        opacity: 0.9;
+
+    }
+
+    .bg_image{
+
+        opacity: 0.7;
+
+    }
+
+}
+
+@media(max-width: 803px){
+
+    .main_content{
+
+        width: 100%;
+
+    }
+
+    .title h2 , .title p{
+
+        text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+
+    }
+
+    .food_box{
+
+        width: 100%;
+
+    }
+
+    .bottom form{
+
+        justify-content: space-between !important;
+
+    }
+
+    .input{
+
+        width: 65%;
+
+    }
+
+}
+
+@media(max-width: 620px){
+
+    .bg_image{
+
+        right: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: fit-content;
+        height: 100%;
+
+    }
+
+    .title h2{
+
+        font-size: 56px;
+        line-height: 56px;
+
+    }
+
+    .title p{
+
+        font-size: 16px;
+        line-height: 18px;
+
+    }
+
+    .food_box{
+
+        padding: 12px;
+
+    }
+
+    .top{
+
+        padding-bottom: 12px;
+        gap: 10px;
+
+    }
+
+    .top button{
+
+        padding: 10px 12px;
+        gap: 5px;
+        font-size: 16px;
+
+    }
+
+    .bottom form {
+
+        gap: 20px;
+
+    }
+
+    form .input{
+
+        width: 100%;
+
+    }
+
+    .input label{
+
+        font-size: 20px !important;
+
+    }
+
+    .input input{
+
+        font-size: 16px !important;
+
+    }
+
+    form button{
+
+        width: 100%;
+        padding: 10px 16px !important;
+        gap: 5px !important;
+        font-size: 16px !important;
+        justify-content: center;
+
+    }
+
+
+}
